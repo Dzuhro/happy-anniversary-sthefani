@@ -331,7 +331,7 @@ RP.forEach((p,i)=>{const[,m,y]=p[0].split(' '),k=m+y;
  L.appendChild(r);io.observe(r)})})();
 </script>
 <script>
-(function(){const T=[["Those Eyes", "New West", "💿", "2a404fa9c051460668f3ed7c1bea2da3"], ["Kacamata", "Afgan", "🕶️", "77cca7dac94d2c165f9f0a3777a7b1cb"], ["Pelangi", "HIVI!", "🌈", "8f7640cc4c7086765e9135ddc196055f"], ["If I Let You Go", "Westlife", "🎧", "b5cf46709b38f8b7561829cf9ee27cfc"], ["Alamak", "Rizky Febian & Adrian Khalif", "💌", "0ff0ff9840ffd7018819ef25d4acf058"], ["2001x", "Adrian Khalif", "🕰️", "f2f2c34a1ab04afd079a84423afbbebb"], ["Tak Di Tanganku", "Juicy Luicy & Mawar De Jongh", "🌹", "e60c7dad582fd808606c87bd81db16f7"]],U=i=>'/_blob/'+i,rows=[];let cu=-1,started=false,muted=false;
+(function(){const T=[["Those Eyes", "New West", "💿", "those-eyes.mp3"], ["Kacamata", "Afgan", "🕶️", "kacamata.mp3"], ["Pelangi", "HIVI!", "🌈", "pelangi.mp3"], ["If I Let You Go", "Westlife", "🎧", "if-i-let-you-go.mp3"], ["Alamak", "Rizky Febian & Adrian Khalif", "💌", "alamak.mp3"], ["2001x", "Adrian Khalif", "🕰️", "2001x.mp3"], ["Tak Di Tanganku", "Juicy Luicy & Mawar De Jongh", "🌹", "tak-di-tanganku.mp3"]],U=i=>'audio/'+encodeURIComponent(i),rows=[];let cu=-1,started=false,muted=false;
 box.innerHTML='';ROWS.length=0;box.style.top='112px';
 const bar=document.createElement('div');bar.className='pb';bar.innerHTML='<button id="pv">⏮</button><button id="pt">▶</button><button id="nx">⏭</button><span id="np">Pick a song</span>';
 function ui(){const pl=cu>=0&&!ael.paused;rows.forEach((r,i)=>{r.classList.toggle('hot',i==cu);r.querySelector('.pp').textContent=(i==cu&&pl)?'❚❚':'▶';if(i!=cu)r.style.removeProperty('--p')});
@@ -358,7 +358,7 @@ if(ev)addEventListener('pointermove',e=>{const r=ev.getBoundingClientRect(),dx=e
 })();
 </script>
 <script>
-const KB=new Audio('/_blob/452aef46d727afab18a64c3851dab786');KB.loop=true;KB.volume=.7;
+const KB=new Audio('audio/keyboard.mp3');KB.loop=true;KB.volume=.7;
 function kbOn(){KB.currentTime=0;KB.play().catch(()=>{});if(!ael.paused)ael.volume=.3}
 function kbOff(){KB.pause();ael.volume=1}
 </script>
